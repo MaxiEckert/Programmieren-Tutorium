@@ -9,4 +9,8 @@ public class Car {
 	
 	Engine engine;
 	
+	Gear gear;
+	
+	Wheel wheels;
+	
 }
