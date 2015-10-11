@@ -13,4 +13,15 @@ public class Car {
 	
 	Wheel wheels;
 	
+	enum Variant {
+		CLASSIC,
+		COMFORT,
+		SPORT
+	}
+	
+	Variant variant;
+	
+	boolean hasAirCondition;
+	
+	boolean hasHeatedSeats;
 }
