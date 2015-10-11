@@ -41,10 +41,10 @@ public class Car {
 	double getTotalPrice() {
 		double totalPrice = 0;
 		
-		totalPrice += body.price;
-		totalPrice += engine.price;
-		totalPrice += gear.price;
-		totalPrice += wheels.price;
+		totalPrice += body.getPrice();
+		totalPrice += engine.getPrice();
+		totalPrice += gear.getPrice();
+		totalPrice += wheels.getPrice();
 		
 		totalPrice *= 1.19;
 		
