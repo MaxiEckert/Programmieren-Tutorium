@@ -16,9 +16,12 @@ public class CarBody {
 	
 	int seats;
 	
-	public CarBody(Color color, double weight, int seats) {
+	double price;
+	
+	public CarBody(Color color, double weight, int seats, double price) {
 		this.color = color;
 		this.weight = weight;
 		this.seats = seats;
+		this.price = price;
 	}
 }

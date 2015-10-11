@@ -38,4 +38,16 @@ public class Car {
 		this.hasHeatedSeats = hasHeatedSeats;
 	}
 	
+	double getTotalPrice() {
+		double totalPrice = 0;
+		
+		totalPrice += body.price;
+		totalPrice += engine.price;
+		totalPrice += gear.price;
+		totalPrice += wheels.price;
+		
+		totalPrice *= 1.19;
+		
+		return totalPrice;
+	}
 }
