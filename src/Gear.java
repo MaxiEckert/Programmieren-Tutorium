@@ -1,13 +1,13 @@
 
 public class Gear {
 
-	byte numGears;
+	int numGears;
 	
 	String modelNumber;
 	
 	double price;
 
-	public Gear(byte numGears, String modelNumber, double price) {
+	public Gear(int numGears, String modelNumber, double price) {
 		this.numGears = numGears;
 		this.modelNumber = modelNumber;
 		this.price = price;
