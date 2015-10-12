@@ -26,5 +26,17 @@ public class CarShop {
 		System.out.println("\n");
 		System.out.println(car1.getPowerClass());
 	}
+	
+	Car getMostExpCar(Car[] cars) {
+		Car mostExpCar = cars[0];
+		
+		for (int i = 1; i < cars.length; i++) {
+			if (cars[i].getTotalPrice() > mostExpCar.getTotalPrice()) {
+				mostExpCar = cars[i];
+			}
+		}
+		
+		return mostExpCar;
+	}
 
 }
