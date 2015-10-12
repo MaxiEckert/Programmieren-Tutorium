@@ -27,4 +27,15 @@ public class Wheel {
 		this.price = price;
 	}
 	
+	public String toString() {
+		String wheelString = "";
+		
+		wheelString += "{ Rim Diameter: " + rimDiameter;		wheelString += ", ";
+		wheelString += "Tire width: " + tireWidth;			wheelString += ", ";
+		wheelString += "Tire diameter: " + tireDiameter;	wheelString += ", ";
+		wheelString += "Model Number: " + modelNumber;		wheelString += ", ";
+		wheelString += "Price: " + price + "}";
+		
+		return wheelString;
+	}
 }

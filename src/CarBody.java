@@ -33,5 +33,14 @@ public class CarBody {
 		this.price = price;
 	}
 	
-	
+	public String toString() {
+		String carBodyString = "";
+		
+		carBodyString += "Color: " + color.toString();	carBodyString += ", ";
+		carBodyString += "Weight: " + weight;			carBodyString += ", ";
+		carBodyString += "Seats: " + seats;				carBodyString += ", ";
+		carBodyString += "Price: " + price;
+		
+		return carBodyString;
+	}
 }

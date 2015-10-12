@@ -21,4 +21,13 @@ public class Gear {
 		this.price = price;
 	}
 	
+	public String toString() {
+		String gearString = "";
+		
+		gearString += "Number of Gears: " + numGears;	gearString += ", ";
+		gearString += "Model Number: " + modelNumber;	gearString += ", ";
+		gearString += "Price: " + price;
+		
+		return gearString;
+	}
 }

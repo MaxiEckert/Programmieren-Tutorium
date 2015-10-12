@@ -35,5 +35,15 @@ public class Engine {
 		this.power = power;
 	}
 	
-	
+	public String toString() {
+		String engineString = "";
+		
+		engineString += "Cylinders: " + cylinders;			engineString += ", ";
+		engineString += "Power: " + power;					engineString += ", ";
+		engineString += "Weight: " + weight;				engineString += ", ";
+		engineString += "Displacement: " + displacement;	engineString += ", ";
+		engineString += "Price: " + price;
+		
+		return engineString;
+	}
 }

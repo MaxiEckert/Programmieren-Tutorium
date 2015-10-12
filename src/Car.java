@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Car {
 
@@ -83,5 +84,17 @@ public class Car {
 		else {
 			return "Power: strong";
 		}
+	}
+	
+	public String toString() {
+		String carString = "";
+		carString += "Manufacturer: " + manufacturer;	carString += ", ";
+		carString += "Serial Number: " + serialNumber; 	carString += ", ";
+		carString += "Body: { " + body + " }, ";
+		carString += "Engine: { " + engine + " }, ";
+		carString += "Gear: { " + gear + " }, ";
+		carString += Arrays.toString(wheels);
+			
+		return carString;
 	}
 }
