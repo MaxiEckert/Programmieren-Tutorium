@@ -38,4 +38,28 @@ public class Wheel {
 		
 		return wheelString;
 	}
+
+	public boolean equals(Wheel other) {
+		if (this == other)
+			return true;
+		if (other == null)
+			return false;
+
+		if (modelNumber == null) {
+			if (other.modelNumber != null)
+				return false;
+		} else if (!modelNumber.equals(other.modelNumber))
+			return false;
+		if (price != other.price)
+			return false;
+		if (rimDiameter != other.rimDiameter)
+			return false;
+		if (tireDiameter != other.tireDiameter)
+			return false;
+		if (tireWidth != other.tireWidth)
+			return false;
+		return true;
+	}
+	
+	
 }

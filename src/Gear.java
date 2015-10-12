@@ -30,4 +30,24 @@ public class Gear {
 		
 		return gearString;
 	}
+
+
+	public boolean equals(Gear other) {
+		if (this == other)
+			return true;
+		if (other == null)
+			return false;
+
+		if (modelNumber == null) {
+			if (other.modelNumber != null)
+				return false;
+		} else if (!modelNumber.equals(other.modelNumber))
+			return false;
+		if (numGears != other.numGears)
+			return false;
+		if (price != other.price)
+			return false;
+		return true;
+	}
+	
 }

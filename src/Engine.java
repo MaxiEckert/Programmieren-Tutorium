@@ -46,4 +46,24 @@ public class Engine {
 		
 		return engineString;
 	}
+
+	public boolean equals(Engine other) {
+		if (this == other)
+			return true;
+		if (other == null)
+			return false;
+
+		if (cylinders != other.cylinders)
+			return false;
+		if (displacement != other.displacement)
+			return false;
+		if (power != other.power)
+			return false;
+		if (price != other.price)
+			return false;
+		if (weight != other.weight)
+			return false;
+		return true;
+	}
+	
 }

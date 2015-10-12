@@ -97,4 +97,44 @@ public class Car {
 			
 		return carString;
 	}
+
+	public boolean equals(Car other) {
+		if (this == other)
+			return true;
+		if (other == null)
+			return false;
+
+		if (body == null) {
+			if (other.body != null)
+				return false;
+		} else if (!body.equals(other.body))
+			return false;
+		if (engine == null) {
+			if (other.engine != null)
+				return false;
+		} else if (!engine.equals(other.engine))
+			return false;
+		if (gear == null) {
+			if (other.gear != null)
+				return false;
+		} else if (!gear.equals(other.gear))
+			return false;
+		if (manufacturer == null) {
+			if (other.manufacturer != null)
+				return false;
+		} else if (!manufacturer.equals(other.manufacturer))
+			return false;
+		if (serialNumber == null) {
+			if (other.serialNumber != null)
+				return false;
+		} else if (!serialNumber.equals(other.serialNumber))
+			return false;
+		if (variant != other.variant)
+			return false;
+		if (!Arrays.equals(wheels, other.wheels))
+			return false;
+		return true;
+	}
+	
+	
 }

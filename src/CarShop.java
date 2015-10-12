@@ -19,6 +19,7 @@ public class CarShop {
 		Car car1 = new Car("VW", "PestSchleuder123", body, engine, gear, wheels, Car.Variant.COMFORT, true, true);
 		
 		Car car2 = new Car("VW", "SportPestSchleuder123", body, engine, gear, wheels, Car.Variant.SPORT, false, false);
+		Car car3 = new Car("VW", "SportPestSchleuder123", body, engine, gear, wheels, Car.Variant.SPORT, false, false);
 		
 		System.out.println("Car 1: " + car1);
 		
@@ -27,6 +28,9 @@ public class CarShop {
 		System.out.println(totalPrice);
 		System.out.println("\n");
 		System.out.println(car1.getPowerClass());
+		
+		System.out.println(car2 == car3);
+		System.out.println(car2.equals(car3));
 	}
 	
 	Car getMostExpCar(Car[] cars) {

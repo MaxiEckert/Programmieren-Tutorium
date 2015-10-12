@@ -43,4 +43,22 @@ public class CarBody {
 		
 		return carBodyString;
 	}
+
+	public boolean equals(CarBody otherCar) {
+		if (this == otherCar)
+			return true;
+		if (otherCar == null)
+			return false;
+
+		if (color != otherCar.color)
+			return false;
+		if (price != otherCar.price)
+			return false;
+		if (seats != otherCar.seats)
+			return false;
+		if (weight != otherCar.weight)
+			return false;
+		return true;
+	}
+	
 }
