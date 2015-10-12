@@ -8,7 +8,13 @@ public class CarShop {
 		
 		Gear gear = new Gear(6, "ABC123", 1000);
 		
-		Wheel wheels = new Wheel(3600, 210, 4000, "Wheel123", 800);
+		Wheel wheel = new Wheel(3600, 210, 4000, "Wheel123", 200);
+		
+		Wheel[] wheels = new Wheel[4];
+		wheels[0] = wheel;
+		wheels[1] = wheel;
+		wheels[2] = wheel;
+		wheels[3] = wheel;
 		
 		Car car1 = new Car("VW", "PestSchleuder123", body, engine, gear, wheels, Car.Variant.COMFORT, true, true);
 		

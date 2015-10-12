@@ -11,7 +11,7 @@ public class Car {
 	
 	Gear gear;
 	
-	Wheel wheels;
+	Wheel[] wheels = new Wheel[4];
 	
 	enum Variant {
 		CLASSIC,
@@ -25,7 +25,7 @@ public class Car {
 	
 	boolean hasHeatedSeats;
 
-	public Car(String manufacturer, String serialNumber, CarBody body, Engine engine, Gear gear, Wheel wheels,
+	public Car(String manufacturer, String serialNumber, CarBody body, Engine engine, Gear gear, Wheel[] wheels,
 			Variant variant, boolean hasAirCondition, boolean hasHeatedSeats) {
 		this.manufacturer = manufacturer;
 		this.serialNumber = serialNumber;
@@ -38,13 +38,22 @@ public class Car {
 		this.hasHeatedSeats = hasHeatedSeats;
 	}
 	
+	double getTotalWheelPrice() {
+		double sum = 0;
+		for (int i = 0; i < wheels.length; i++) {
+			sum += wheels[i].getPrice();
+		}
+		
+		return sum;
+	}
+	
 	double getTotalPrice() {
 		double totalPrice = 0;
 		
 		totalPrice += body.getPrice();
 		totalPrice += engine.getPrice();
 		totalPrice += gear.getPrice();
-		totalPrice += wheels.getPrice();
+		totalPrice += getTotalWheelPrice();
 		
 		totalPrice *= 1.19;
 		
@@ -57,7 +66,7 @@ public class Car {
 		totalPrice += body.getPrice();
 		totalPrice += engine.getPrice();
 		totalPrice += gear.getPrice();
-		totalPrice += wheels.getPrice();
+		totalPrice += getTotalWheelPrice();
 		
 		totalPrice *= (1 + mwst/100.0);
 		
