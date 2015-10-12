@@ -50,4 +50,17 @@ public class Car {
 		
 		return totalPrice;
 	}
+	
+	double getTotalPrice(int mwst) {
+		double totalPrice = 0;
+		
+		totalPrice += body.getPrice();
+		totalPrice += engine.getPrice();
+		totalPrice += gear.getPrice();
+		totalPrice += wheels.getPrice();
+		
+		totalPrice *= (1 + mwst/100.0);
+		
+		return totalPrice;
+	}
 }

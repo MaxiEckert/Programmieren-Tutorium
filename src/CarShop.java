@@ -14,7 +14,7 @@ public class CarShop {
 		
 		Car car2 = new Car("VW", "SportPestSchleuder123", body, engine, gear, wheels, Car.Variant.SPORT, false, false);
 		
-		double totalPrice = car1.getTotalPrice();
+		double totalPrice = car1.getTotalPrice(19);
 		
 		System.out.println(totalPrice);
 	}
