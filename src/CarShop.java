@@ -17,6 +17,8 @@ public class CarShop {
 		double totalPrice = car1.getTotalPrice(19);
 		
 		System.out.println(totalPrice);
+		System.out.println("\n");
+		System.out.println(car1.getPowerClass());
 	}
 
 }

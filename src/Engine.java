@@ -26,6 +26,14 @@ public class Engine {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+
+	public double getPower() {
+		return power;
+	}
+
+	public void setPower(double power) {
+		this.power = power;
+	}
 	
 	
 }

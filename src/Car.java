@@ -63,4 +63,16 @@ public class Car {
 		
 		return totalPrice;
 	}
+	
+	String getPowerClass() {
+		if (engine.getPower() < 100) {
+			return "Power: weak";
+		}
+		else if (engine.power < 200) {
+			return "Power: middle";
+		}
+		else {
+			return "Power: strong";
+		}
+	}
 }
