@@ -40,8 +40,8 @@ public class Car {
 	
 	double getTotalWheelPrice() {
 		double sum = 0;
-		for (int i = 0; i < wheels.length; i++) {
-			sum += wheels[i].getPrice();
+		for (Wheel wheel : wheels) {
+			sum += wheel.getPrice();
 		}
 		
 		return sum;
