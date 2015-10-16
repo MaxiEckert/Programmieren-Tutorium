@@ -86,13 +86,12 @@ public class CarList {
 	}
 		
 	public String toString() {
-		CarListElement currentEl = first;
 		String listString = "[";
 		
-		while (currentEl != null) {
-			listString += currentEl.getContent().toString();
+		Iterator it = new Iterator(first);
+		while (it.hasNext()) {
+			listString += it.next().toString();
 			listString += ", \n";
-			currentEl = currentEl.getNext();
 		}
 		
 		listString += "]";
