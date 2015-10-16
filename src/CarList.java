@@ -27,6 +27,26 @@ public class CarList {
 			el.setNext(new CarListElement(c, null));
 		}
 	}
+	
+	public void remove(Car c) {
+		CarListElement el = first;
+		while (el != null && el.getContent().equals(c)) {
+			el = el.getNext();
+			first = el;
+		}
+		
+		if (el == null) {
+			return;
+		}
+		
+		while (el.getNext() != null) {
+			if (el.getNext().getContent().equals(c)) {
+				el.setNext(el.getNext().getNext());
+			} else {
+				el = el.getNext();
+			}
+		}
+	}
 		
 	public String toString() {
 		CarListElement currentEl = first;

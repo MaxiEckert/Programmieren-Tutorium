@@ -34,8 +34,9 @@ public class CarShop {
 		
 		testCarListAddFirst(new Car[] {car1, car2, car3});
 		testCarListAddLast(new Car[] {car1, car2, car3});
+		testCarListRemove(new Car[] {car1, car2, car3}, car2);
 	}
-	
+
 	Car getMostExpCar(Car[] cars) {
 		Car mostExpCar = cars[0];
 		
@@ -61,6 +62,16 @@ public class CarShop {
 		for (int i = 0; i < carArray.length; i++) {
 			list.addLast(carArray[i]);
 		}
+	    System.out.println(list);
+	}
+	
+	
+	static void testCarListRemove(Car[] cars, Car car) {
+		CarList list = new CarList();
+		for (int i = 0; i < cars.length; i++) {
+			list.addFirst(cars[i]);
+		}
+	    list.remove(car);
 	    System.out.println(list);
 	}
 
