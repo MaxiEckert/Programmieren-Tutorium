@@ -16,4 +16,17 @@ public class CarList {
 		first = newEl;
 	}
 		
+	public String toString() {
+		CarListElement currentEl = first;
+		String listString = "[";
+		
+		while (currentEl != null) {
+			listString += currentEl.getContent().toString();
+			listString += ", \n";
+			currentEl = currentEl.getNext();
+		}
+		
+		listString += "]";
+		return listString;
+	}
 }

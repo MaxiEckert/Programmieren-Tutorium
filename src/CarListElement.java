@@ -9,4 +9,21 @@ public class CarListElement {
 		this.content = content;
 		this.next = next;
 	}
+
+	public CarListElement getNext() {
+		return next;
+	}
+
+	public void setNext(CarListElement next) {
+		this.next = next;
+	}
+
+	public Car getContent() {
+		return content;
+	}
+
+	public void setContent(Car content) {
+		this.content = content;
+	}
+	
 }
