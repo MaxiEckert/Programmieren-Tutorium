@@ -15,6 +15,18 @@ public class CarList {
 		CarListElement newEl = new CarListElement(c, first);
 		first = newEl;
 	}
+	
+	public void addLast(Car c) {
+		if(first == null) {
+			addFirst(c);
+		} else {
+			CarListElement el = first;
+			while (el.getNext() != null) {
+				el = el.getNext();
+			}
+			el.setNext(new CarListElement(c, null));
+		}
+	}
 		
 	public String toString() {
 		CarListElement currentEl = first;

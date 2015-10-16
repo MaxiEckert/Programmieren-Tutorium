@@ -32,7 +32,8 @@ public class CarShop {
 		System.out.println(car2 == car3);
 		System.out.println(car2.equals(car3));
 		
-		testCarList(new Car[] {car1, car2, car3});
+		testCarListAddFirst(new Car[] {car1, car2, car3});
+		testCarListAddLast(new Car[] {car1, car2, car3});
 	}
 	
 	Car getMostExpCar(Car[] cars) {
@@ -47,10 +48,18 @@ public class CarShop {
 		return mostExpCar;
 	}
 	
-	static void testCarList(Car[] carArray) {
+	static void testCarListAddFirst(Car[] carArray) {
 		CarList list = new CarList();
 		for (int i = 0; i < carArray.length; i++) {
 			list.addFirst(carArray[i]);
+		}
+	    System.out.println(list);
+	}
+	
+	static void testCarListAddLast(Car[] carArray) {
+		CarList list = new CarList();
+		for (int i = 0; i < carArray.length; i++) {
+			list.addLast(carArray[i]);
 		}
 	    System.out.println(list);
 	}
