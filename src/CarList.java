@@ -47,6 +47,15 @@ public class CarList {
 			}
 		}
 	}
+	
+	public boolean contains(Car c) {
+		for (CarListElement el = first; el != null; el = el.getNext()) {
+			if (el.getContent().equals(c)) {
+				return true;
+			}
+		}
+		return false;
+	}
 		
 	public String toString() {
 		CarListElement currentEl = first;
