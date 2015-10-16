@@ -70,4 +70,22 @@ public class CarList {
 		listString += "]";
 		return listString;
 	}
+	
+	public class Iterator {
+		private CarListElement current;
+		
+		private Iterator(CarListElement start) {
+			current = start;
+		}
+		
+		public boolean hasNext() {
+			return (current != null);
+		}
+		
+		public Car next() {
+			Car currentCar = current.getContent();
+			current = current.getNext();
+			return currentCar;
+		}
+	}
 }
