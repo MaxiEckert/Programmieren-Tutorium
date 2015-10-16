@@ -26,6 +26,10 @@ public class Car {
 	
 	boolean hasHeatedSeats;
 
+	public Car() {
+		
+	}
+	
 	public Car(String manufacturer, String serialNumber, CarBody body, Engine engine, Gear gear, Wheel[] wheels,
 			Variant variant, boolean hasAirCondition, boolean hasHeatedSeats) {
 		this.manufacturer = manufacturer;
