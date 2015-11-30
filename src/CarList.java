@@ -88,7 +88,7 @@ public class CarList {
 	public String toString() {
 		String listString = "[";
 		
-		Iterator it = new Iterator(first);
+		CarIterator it = new CarIterator(first);
 		while (it.hasNext()) {
 			listString += it.next().toString();
 			listString += ", \n";
@@ -98,10 +98,10 @@ public class CarList {
 		return listString;
 	}
 	
-	public class Iterator {
+	public class CarIterator {
 		private CarListElement current;
 		
-		private Iterator(CarListElement start) {
+		private CarIterator(CarListElement start) {
 			current = start;
 		}
 		
