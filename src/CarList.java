@@ -39,6 +39,10 @@ public class CarList {
 		first = null;
 	}
 	
+	public CarIterator iterator() {
+	    return new CarIterator(first);
+	}
+	
 	public void addFirst(Car c) {
 		CarListElement newEl = new CarListElement(c, first);
 		first = newEl;

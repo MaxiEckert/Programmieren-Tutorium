@@ -1,7 +1,7 @@
 
 public class CarBody {
 	
-	enum Color {
+	static enum Color {
 		BLACK,
 		GREY,
 		WHITE,
@@ -10,13 +10,13 @@ public class CarBody {
 		BLUE
 	}
 
-	Color color;
+	private Color color;
 	
-	double weight;
+	private double weight;
 	
-	int seats;
+	private int seats;
 	
-	double price;
+	private double price;
 	
 	public CarBody(Color color, double weight, int seats, double price) {
 		this.color = color;

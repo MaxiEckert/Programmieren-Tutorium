@@ -21,11 +21,14 @@ public class CarShop {
 		Car car2 = new Car("VW", "SportPestSchleuder123", body, engine, gear, wheels, Car.Variant.SPORT, false, false);
 		Car car3 = new Car("VW", "SportPestSchleuder123", body, engine, gear, wheels, Car.Variant.SPORT, false, false);
 		
-		System.out.println("Car 1: " + car1);
+		CarList carList = new CarList();
+		carList.addLast(car1);
+		carList.addLast(car2);
+		carList.addLast(car3);
 		
-		
-		System.out.println("Car2 = Car3 ? : " + (car2 == car3));
-		System.out.println("Car2 = Car3 ? : " + car2.equals(car3));
+		for (CarList.CarIterator it = carList.iterator(); it.hasNext();) {
+		    System.out.println(it.next());
+		}
 	}
 
 	Car getMostExpCar(Car[] cars) {

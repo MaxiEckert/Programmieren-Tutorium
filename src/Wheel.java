@@ -1,15 +1,15 @@
 
 public class Wheel {
 
-	int rimDiameter;
+    private int rimDiameter;
 	
-	int tireWidth;
+    private int tireWidth;
 	
-	int tireDiameter;
+    private int tireDiameter;
 	
-	String modelNumber;
+    private String modelNumber;
 	
-	double price;
+    private double price;
 
 	public Wheel(int rimDiameter, int tireWidth, int tireDiameter, String modelNumber, double price) {
 		this.rimDiameter = rimDiameter;

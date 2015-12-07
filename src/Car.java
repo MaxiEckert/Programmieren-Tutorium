@@ -2,29 +2,29 @@ import java.util.Arrays;
 
 public class Car {
 
-	String manufacturer;
+	private String manufacturer;
 	
-	String serialNumber;
+	private String serialNumber;
 	
-	CarBody body;
+	private CarBody body;
 	
-	Engine engine;
+	private Engine engine;
 	
-	Gear gear;
+	private Gear gear;
 	
-	Wheel[] wheels = new Wheel[4];
+	private Wheel[] wheels = new Wheel[4];
 	
-	enum Variant {
+	static enum Variant {
 		CLASSIC,
 		COMFORT,
 		SPORT
 	}
 	
-	Variant variant;
+	private Variant variant;
 	
-	boolean hasAirCondition;
+	private boolean hasAirCondition;
 	
-	boolean hasHeatedSeats;
+	private boolean hasHeatedSeats;
 
 	public Car() {
 		
@@ -82,7 +82,7 @@ public class Car {
 		if (engine.getPower() < 100) {
 			return "Power: weak";
 		}
-		else if (engine.power < 200) {
+		else if (engine.getPower() < 200) {
 			return "Power: middle";
 		}
 		else {

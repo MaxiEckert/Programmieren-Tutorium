@@ -1,11 +1,11 @@
 
 public class Gear {
 
-	int numGears;
+    private int numGears;
 	
-	String modelNumber;
+    private String modelNumber;
 	
-	double price;
+    private double price;
 
 	public Gear(int numGears, String modelNumber, double price) {
 		this.numGears = numGears;

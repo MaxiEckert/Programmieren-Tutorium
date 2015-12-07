@@ -1,15 +1,15 @@
 
 public class Engine {
 
-	int cylinders;
+    private int cylinders;
 	
-	double power;
+    private double power;
 	
-	double weight;
+    private double weight;
 	
-	double displacement;
+    private double displacement;
 	
-	double price;
+    private double price;
 
 	public Engine(int cylinders, double power, double weight, double displacement, double price) {
 		this.cylinders = cylinders;
