@@ -1,4 +1,6 @@
 
+
+
 public class CarShop {
 
 	public static void main(String[] args) {
@@ -21,21 +23,30 @@ public class CarShop {
 		Car car2 = new Car("VW", "SportPestSchleuder123", body, engine, gear, wheels, Car.Variant.SPORT, false, false);
 		Car car3 = new Car("VW", "SportPestSchleuder123", body, engine, gear, wheels, Car.Variant.SPORT, false, false);
 		
-		CarList carList = new CarList();
-		carList.addLast(car1);
-		carList.addLast(car2);
-		carList.addLast(car3);
+		Truck t = new Truck("MAN", "truck", body, engine, gear, wheels);
 		
-		for (CarList.CarIterator it = carList.iterator(); it.hasNext();) {
+		CarShopList<Vehicle> vehicleList = new CarShopList<Vehicle>();
+		vehicleList.addLast(car1);
+		vehicleList.addLast(car2);
+		vehicleList.addLast(car3);
+		vehicleList.addLast(t);
+		
+		for (CarShopList<Vehicle>.VehicleIterator it = vehicleList.iterator(); it.hasNext();) {
 		    System.out.println(it.next());
 		}
+		System.out.println("Total price of Vehicles in list: " + vehicleList.calculateTotalPrice());
+		
+		CarShopList<Order> orderList = new CarShopList<Order>();
+		orderList.addFirst(new Order(27));
+		orderList.addFirst(new Order(42));
+		System.out.println("Total price of Orders in list: " + orderList.calculateTotalPrice());
 	}
 
 	Car getMostExpCar(Car[] cars) {
 		Car mostExpCar = cars[0];
 		
 		for (int i = 1; i < cars.length; i++) {
-			if (cars[i].getTotalPrice() > mostExpCar.getTotalPrice()) {
+			if (cars[i].getPrice() > mostExpCar.getPrice()) {
 				mostExpCar = cars[i];
 			}
 		}

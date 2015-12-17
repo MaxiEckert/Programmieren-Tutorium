@@ -1,18 +1,10 @@
 import java.util.Arrays;
 
-public class Car {
+public class Car extends Vehicle {
 
-	private String manufacturer;
+
 	
-	private String serialNumber;
-	
-	private CarBody body;
-	
-	private Engine engine;
-	
-	private Gear gear;
-	
-	private Wheel[] wheels = new Wheel[4];
+	private Wheel[] wheels;
 	
 	static enum Variant {
 		CLASSIC,
@@ -27,7 +19,7 @@ public class Car {
 	private boolean hasHeatedSeats;
 
 	public Car() {
-		
+	    wheels = new Wheel[4];
 	}
 	
 	public Car(String manufacturer, String serialNumber, CarBody body, Engine engine, Gear gear, Wheel[] wheels,
@@ -42,53 +34,6 @@ public class Car {
 		this.hasAirCondition = hasAirCondition;
 		this.hasHeatedSeats = hasHeatedSeats;
 	}
-	
-	double getTotalWheelPrice() {
-		double sum = 0;
-		for (Wheel wheel : wheels) {
-			sum += wheel.getPrice();
-		}
-		
-		return sum;
-	}
-	
-	double getTotalPrice() {
-		double totalPrice = 0;
-		
-		totalPrice += body.getPrice();
-		totalPrice += engine.getPrice();
-		totalPrice += gear.getPrice();
-		totalPrice += getTotalWheelPrice();
-		
-		totalPrice *= 1.19;
-		
-		return totalPrice;
-	}
-	
-	double getTotalPrice(int mwst) {
-		double totalPrice = 0;
-		
-		totalPrice += body.getPrice();
-		totalPrice += engine.getPrice();
-		totalPrice += gear.getPrice();
-		totalPrice += getTotalWheelPrice();
-		
-		totalPrice *= (1 + mwst/100.0);
-		
-		return totalPrice;
-	}
-	
-	public String toString() {
-		String carString = "";
-		carString += "Manufacturer: " + manufacturer;	carString += ", ";
-		carString += "Serial Number: " + serialNumber; 	carString += ", ";
-		carString += "Body: { " + body + " }, ";
-		carString += "Engine: { " + engine + " }, ";
-		carString += "Gear: { " + gear + " }, ";
-			
-		return carString;
-	}
-
 	
 	
 }
